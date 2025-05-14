@@ -1,0 +1,6 @@
+[submodule "progresso_frontend"]
+	path = progresso_frontend
+	url = https://github.com/esetaro2/progresso_frontend.git
+[submodule "progresso_backend"]
+	path = progresso_backend
+	url = https://github.com/esetaro2/progresso_backend.git
