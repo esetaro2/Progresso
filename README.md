@@ -1,1 +1,1 @@
-![Badge](https://img.shields.io/badge/status-completed-brightgreen)  
+![GitHub license](https://img.shields.io/github/license/esetaro2/progresso)
