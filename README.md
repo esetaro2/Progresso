@@ -12,7 +12,6 @@ This project was developed as part of a **Bachelor’s thesis in Computer Scienc
 - [✨ Main Features](#features)  
 - [📦 Installation](#installation)
 - [📄 Documentation](#documentation)
-- [⚖️ License](#license)
 <h2 id="technologies">💻 Technologies</h2>
 
 - **Frontend:**
