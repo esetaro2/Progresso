@@ -1,4 +1,4 @@
-# Progresso
+#  Progresso
 
 The system is a **web-based collaborative environment** intended for **team project management**. Facilitate creation and structuring of projects, task creation, tracking progress, and communication via comments. The system should be designed in a way that it supports **secure permission management** where different categories of users (e.g., *administrators*, *project managers*, and *team members*) can access different functionalities.
 
@@ -9,17 +9,8 @@ This project was developed as part of a **Bachelor’s thesis** during an *exter
 ## Table of Contents
 
 - [💻 Technologies](#technologies)  
-- [✨ Features](#features)  
-- [📦 Installation](#installation)  
-- [🚀 Usage](#usage)  
-- [🖼️ Screenshots](#screenshots)  
-- [📂 Project Structure](#project-structure)  
-- [🌐 Deployment](#deployment)  
-- [👥 User Roles](#user-roles)  
-- [🧪 Testing](#testing)  
-- [💡 Possible Improvements](#possible-improvements)  
-- [✍️ Author](#author)  
-- [⚖️ License](#license)
+- [✨ Main Features](#features)  
+- [📦 Installation](#installation)
 
 <h2 id="technologies">💻 Technologies</h2>
 
@@ -53,46 +44,164 @@ This project was developed as part of a **Bachelor’s thesis** during an *exter
 - **Other Tools:**
   - **Postman**: API testing tool used to test the backend APIs.
 
-<h2 id="features">✨ Features</h2>
+<h2 id="features">✨ Main Features</h2>
 
-*Content coming soon...*
+- 🔐 **Role-based access control**: Different permissions for Admins, Project Managers, and Team Members.
+- 📁 **Project and task management**: Create, update, assign, and track tasks within projects.
+- 💬 **Comment system**: Users can communicate directly within each project via comments.
+- 📊 **Progress tracking**: Visual indicators of task and project status.
+- 🔎 **Secure authentication**: Login system protected via Spring Security.
 
 <h2 id="installation">📦 Installation</h2>
 
-*Content coming soon...*
+### ‼️ Before you start
 
-<h2 id="usage">🚀 Usage</h2>
+Make sure **Git** is installed (required for cloning the repo and submodules):
 
-*Content coming soon...*
+```bash
+git --version
+# e.g. git version 2.41.0
+```
+If you don’t have it, install from: https://git-scm.com/
+### 🔧 Backend Setup
 
-<h2 id="screenshots">🖼️ Screenshots</h2>
+#### Prerequisites
 
-*Content coming soon...*
+Make sure the following tools are installed on your system:
 
-<h2 id="project-structure">📂 Project Structure</h2>
+- [Java 21](https://adoptium.net/)
+- [MySQL](https://www.mysql.com/)
+- [Maven](https://maven.apache.org/)
 
-*Content coming soon...*
+#### 1. Clone the repository with submodules
 
-<h2 id="deployment">🌐 Deployment</h2>
+This project uses Git submodules for frontend and backend. Clone it using:
 
-*Content coming soon...*
+```bash
+git clone --recurse-submodules https://github.com/esetaro2/progresso.git
+cd progresso-platform
+```
+<strong>If you forgot <code>--recurse-submodules</code></strong>, run this:
 
-<h2 id="user-roles">👥 User Roles</h2>
+```bash
+git submodule update --init --recursive
+```
 
-*Content coming soon...*
+#### 2. Configure environment variables
 
-<h2 id="testing">🧪 Testing</h2>
+Before proceeding, set the following environment variables so that Spring Boot picks up your credentials and secret.
 
-*Content coming soon...*
+- ##### Linux / macOS (bash, zsh, etc.)
+  ```bash
+  export DB_USER="your_mysql_username"
+  export DB_PASS="your_mysql_password"
+  export JWT_SECRET="your_jwt_secret_key"
+  ```
+  To verify:
+  ```bash
+  echo $DB_USER
+  echo $DB_PASS
+  echo $JWT_SECRET
+  ```
+  
+- ##### Windows PowerShell
+  ```bash
+  $env:DB_USER = "your_mysql_username"
+  $env:DB_PASS = "your_mysql_password"
+  $env:JWT_SECRET = "your_jwt_secret_key"
+  ```
+  To verify:
+  ```bash
+  echo $env:DB_USER
+  echo $env:DB_PASS
+  echo $env:JWT_SECRET
+  ```
 
-<h2 id="possible-improvements">💡 Possible Improvements</h2>
+- ##### Windows (cmd.exe)
+  ```bash
+  set DB_USER=your_mysql_username
+  set DB_PASS=your_mysql_password
+  set JWT_SECRET=your_jwt_secret_key
+  ```
+  To verify:
+   ```bash
+  echo %DB_USER%
+   echo %DB_PASS%
+   echo %JWT_SECRET%
+   ```
 
-*Content coming soon...*
+#### 3. Set up the MySQL database
 
-<h2 id="author">✍️ Author</h2>
+##### 1. Start your MySQL server.
+##### 2. Create a new database:
 
-*Content coming soon...*
+```bash
+CREATE SCHEMA progresso CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+```
 
-<h2 id="license">⚖️ License</h2>
+#### 4. Build and run the backend
 
-*Content coming soon...*
+From the backend directory, run the following commands:
+
+```bash
+mvn clean install
+mvn spring-boot:run
+```
+
+### 🔧 Frontend Setup
+#### Prerequisites
+
+Make sure the following tools are installed on your system:
+
+- [Node.js (v22.12.0 or higher)](https://nodejs.org/en/download/)
+- [Angular CLI (v19.1.0 or higher)](https://angular.dev/tools/cli/setup-local)
+
+#### 1. Verify Node.js version
+```bash
+node --version
+# should output: v22.12.0 (or newer)
+```
+#### 2. Verify Angular CLI version
+```bash
+ng version
+# should show Angular CLI: 19.1.0 (or newer)
+```
+If you need to update:
+```bash
+npm install -g @angular/cli@latest
+```
+
+#### 3. Navigate to the frontend module
+```bash
+cd progresso-frontend
+```
+#### 4. Install dependencies
+```bash
+npm install --legacy-peer-deps
+```
+#### 5. Serve the application
+```bash
+ng serve
+```
+The frontend will be available at:
+```bash
+http://localhost:4200
+```
+
+## 🛠️ Initial Admin User
+
+To get you started immediately, the application will auto-create a default administrator on first run.
+- **Username:** `a.superuser.am1@progresso.com`  
+- **Password:** `admin123`
+
+Once logged in as **admin**, you can:
+- Register new users
+- Create projects
+- Define teams
+- Create and assign tasks
+
+<h2 id="documentation">📄 Documentation</h2>
+
+The full technical documentation, including use cases, system architecture, and testing details, is available in the thesis document (in Italian):
+
+👉 [📘 View the full thesis (PDF)](./docs/thesis-documentation.pdf)
