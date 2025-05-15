@@ -4,14 +4,15 @@ The system is a **web-based collaborative environment** intended for **team proj
 
 Developed with **Angular**, the user interface is simple and facilitates easy and efficient visualization and interaction with the data related to the projects. The backend, developed using **Java** and **Spring Boot**, manages business logic and data access via a **repository** and **service structure**.
 
-This project was developed as part of a **Bachelor’s thesis** during an *external internship* at the IT company **IT Svil Srl**. The system was designed to maximize collaboration and support project management, making it suitable for a variety of organizational contexts and team structures, with a focus on **effectiveness** and **scalability**.
+This project was developed as part of a **Bachelor’s thesis in Computer Science** at the **University of Salerno (UNISA)**, during an *external internship* at the IT company **IT Svil Srl**. The system was designed to maximize collaboration and support project management, making it suitable for a variety of organizational contexts and team structures, with a focus on **effectiveness** and **scalability**.
 
 ## Table of Contents
 
 - [💻 Technologies](#technologies)  
 - [✨ Main Features](#features)  
 - [📦 Installation](#installation)
-
+- [📄 Documentation](#documentation)
+- [⚖️ License](#license)
 <h2 id="technologies">💻 Technologies</h2>
 
 - **Frontend:**
@@ -205,3 +206,11 @@ Once logged in as **admin**, you can:
 The full technical documentation, including use cases, system architecture, and testing details, is available in the thesis document (in Italian):
 
 👉 [📘 View the full thesis (PDF)](./docs/thesis-documentation.pdf)
+
+<h2 id="license">⚖️ License</h2>
+
+This project is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+
+You are free to **view and share** the code, but **you may not use it for commercial purposes, nor modify or redistribute it without explicit permission**.
+
+© 2025 Emanuele Setaro. All rights reserved.
