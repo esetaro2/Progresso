@@ -206,11 +206,3 @@ Once logged in as **admin**, you can:
 The full technical documentation, including use cases, system architecture, and testing details, is available in the thesis document (in Italian):
 
 👉 [📘 View the full thesis (PDF)](./docs/thesis-documentation.pdf)
-
-<h2 id="license">⚖️ License</h2>
-
-This project is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
-
-You are free to **view and share** the code, but **you may not use it for commercial purposes, nor modify or redistribute it without explicit permission**.
-
-© 2025 Emanuele Setaro. All rights reserved.
