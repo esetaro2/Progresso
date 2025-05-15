@@ -187,9 +187,7 @@ The frontend will be available at:
 ```bash
 http://localhost:4200
 ```
-
-## 🛠️ Initial Admin User
-
+#### 6. Initial Admin User
 To get you started immediately, the application will auto-create a default administrator on first run.
 - **Username:** `a.superuser.am1@progresso.com`  
 - **Password:** `admin123`
