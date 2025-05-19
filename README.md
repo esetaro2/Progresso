@@ -71,7 +71,7 @@ If you don’t have it, install from: https://git-scm.com/
 Make sure the following tools are installed on your system:
 
 - [Java 17](https://adoptium.net/)
-- [MySQL 8](https://www.mysql.com/)
+- [MySQL 8.0](https://www.mysql.com/)
 - [Maven](https://maven.apache.org/)
 
 #### 1. Clone the repository with submodules
