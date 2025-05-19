@@ -4,7 +4,7 @@ The system is a **web-based collaborative environment** intended for **team proj
 
 Developed with **Angular**, the user interface is simple and facilitates easy and efficient visualization and interaction with the data related to the projects. The backend, developed using **Java** and **Spring Boot**, manages business logic and data access via a **repository** and **service structure**.
 
-This project was developed as part of a **Bachelor’s thesis in Computer Science** at the **University of Salerno (UNISA)**, during an *external internship* at the IT company **IT Svil Srl**. The system was designed to maximize collaboration and support project management, making it suitable for a variety of organizational contexts and team structures, with a focus on **effectiveness** and **scalability**.
+This project was developed as part of a **Bachelor’s thesis in Computer Science** at the **University of Salerno (UNISA)**. The system was designed to maximize collaboration and support project management, making it suitable for a variety of organizational contexts and team structures, with a focus on **effectiveness** and **scalability**.
 
 ## Table of Contents
 
