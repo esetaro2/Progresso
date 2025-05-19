@@ -70,7 +70,7 @@ If you don’t have it, install from: https://git-scm.com/
 
 Make sure the following tools are installed on your system:
 
-- [Java 21](https://adoptium.net/)
+- [Java 17](https://adoptium.net/)
 - [MySQL](https://www.mysql.com/)
 - [Maven](https://maven.apache.org/)
 
