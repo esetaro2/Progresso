@@ -80,7 +80,7 @@ This project uses Git submodules for frontend and backend. Clone it using:
 
 ```bash
 git clone --recurse-submodules https://github.com/esetaro2/progresso.git
-cd progresso-platform
+cd progresso
 ```
 <strong>If you forgot <code>--recurse-submodules</code></strong>, run this:
 
