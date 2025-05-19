@@ -85,10 +85,11 @@ git clone --recurse-submodules https://github.com/esetaro2/progresso.git
 ```bash
 git submodule update --init --recursive
 ```
+*Tip: You can open the terminal directly in the folder where you want to clone the repository by right-clicking inside the folder in File Explorer (Windows) and selecting "Open in Terminal", or use the equivalent on your OS.*
 
 #### 2. Configure environment variables
 
-Move to the "progresso" folder and open a new terminal, set the following environment variables so that Spring Boot picks up your credentials and secret.
+Move to the <code>progresso</code> folder and open a new terminal, set the following environment variables so that Spring Boot picks up your MySQL credentials.
 
 - ##### Linux / macOS (bash, zsh, etc.)
   ```bash
@@ -149,6 +150,8 @@ mvn clean install
 mvn spring-boot:run
 ```
 
+Make sure to keep this terminal open when launching the frontend.
+
 ### 🔧 Frontend Setup
 #### Prerequisites
 
@@ -183,6 +186,7 @@ cd path/to/progresso-frontend
 ```bash
 npm install --legacy-peer-deps
 ```
+
 #### 5. Serve the application
 ```bash
 ng serve
