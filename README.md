@@ -62,7 +62,7 @@ Make sure **Git** is installed (required for cloning the repo and submodules):
 ```bash
 git --version
 ```
-If you don’t have it, install from [here](https://github.com/git-for-windows/git/releases/download/v2.49.0.windows.1/Git-2.49.0-64-bit.exe).
+If you don’t have it, install it from [here](https://github.com/git-for-windows/git/releases/download/v2.49.0.windows.1/Git-2.49.0-64-bit.exe).
 ### 🔧 Backend Setup
 
 #### Prerequisites
