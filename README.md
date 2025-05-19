@@ -12,6 +12,7 @@ This project was developed as part of a **Bachelor’s thesis in Computer Scienc
 - [✨ Main Features](#features)  
 - [📦 Installation](#installation)
 - [📄 Documentation](#documentation)
+- [⚖️ Licensing](#licensing)
 <h2 id="technologies">💻 Technologies</h2>
 
 - **Frontend:**
@@ -203,3 +204,9 @@ Once logged in as **admin**, you can:
 The full technical documentation, including use cases, system architecture, and testing details, is available in the thesis document (in Italian):
 
 👉 [📘 View the full thesis (PDF)](./docs/thesis-documentation.pdf)
+
+<h2 id="licensing">⚖️ Licensing</h2>
+All contents of this repository — including source code, documentation, and the thesis document — are protected by copyright and distributed under a custom All Rights Reserved license.
+  
+👉 [📘 View the license file for details](./LICENSE)
+
