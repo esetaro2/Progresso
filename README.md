@@ -132,8 +132,8 @@ Move to the <code>progresso</code> folder and open a new terminal, set the follo
 
 #### 3. Set up the MySQL database
 
-##### a. Open MySQL workbench and start the server.
-##### b. Create a new database:
+##### a. Open <code>MySQL Workbench</code> and start the server.
+##### b. Open a new query tab and paste the following instructions to create the database:
 
 ```bash
 CREATE SCHEMA progresso CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
