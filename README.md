@@ -132,8 +132,8 @@ Move to the <code>progresso</code> folder and open a new terminal, set the follo
 
 #### 3. Set up the MySQL database
 
-##### 1. Open MySQL workbench and start the server.
-##### 2. Create a new database:
+##### a. Open MySQL workbench and start the server.
+##### b. Create a new database:
 
 ```bash
 CREATE SCHEMA progresso CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -175,6 +175,24 @@ If you need to update:
 npm install -g @angular/cli@latest
 ```
 
+If you encounter an error related to PowerShell's execution policy (e.g., when running `ng serve` or `npm install`), you might need to temporarily adjust the policy.
+
+##### a. Open PowerShell as Administrator.
+##### b. Run the following command:
+
+```bash
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+##### c. When prompted, type <code>Y</code> and press Enter.
+
+This command allows local scripts to run while still blocking unsigned remote scripts.
+
+You can revert the change later with:
+
+```bash
+Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope CurrentUser
+```
+
 #### 3. Navigate to the frontend module
 Open a new terminal and execute:
 ```bash
@@ -213,7 +231,8 @@ The full technical documentation, including use cases, system architecture, and 
 👉 [📘 View the full thesis (PDF)](./docs/thesis-documentation.pdf)
 
 <h2 id="licensing">⚖️ Licensing</h2>
-All contents of this repository — including source code, documentation, and the thesis document — are protected by copyright and distributed under a custom All Rights Reserved license.
+All contents of this repository — including source code, documentation, and the thesis document — are protected by copyright and distributed under a custom All Rights Reserved license:
+
   
-👉 [📘 View the license file for details](./LICENSE)
+👉 [📘 View the license](./LICENSE)
 
