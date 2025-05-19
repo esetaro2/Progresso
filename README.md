@@ -61,26 +61,24 @@ Make sure **Git** is installed (required for cloning the repo and submodules):
 
 ```bash
 git --version
-# e.g. git version 2.41.0
 ```
-If you don’t have it, install from: https://git-scm.com/
+If you don’t have it, install from [here](https://github.com/git-for-windows/git/releases/download/v2.49.0.windows.1/Git-2.49.0-64-bit.exe).
 ### 🔧 Backend Setup
 
 #### Prerequisites
 
 Make sure the following tools are installed on your system:
 
-- [Java 17](https://adoptium.net/)
-- [MySQL 8.0](https://www.mysql.com/)
-- [Maven](https://maven.apache.org/)
+- [Java 17](https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.15%2B6/OpenJDK17U-jdk_x64_windows_hotspot_17.0.15_6.msi)
+- [MySQL 8 (select the full installation)](https://dev.mysql.com/get/Downloads/MySQLInstaller/mysql-installer-web-community-8.0.42.0.msi)
+- [Maven](https://maven.apache.org/install.html)
 
 #### 1. Clone the repository with submodules
 
-This project uses Git submodules for frontend and backend. Clone it using:
+This project uses Git submodules for frontend and backend. Open a terminal where you want to clone the repository and execute:
 
 ```bash
 git clone --recurse-submodules https://github.com/esetaro2/progresso.git
-cd progresso
 ```
 <strong>If you forgot <code>--recurse-submodules</code></strong>, run this:
 
@@ -90,13 +88,13 @@ git submodule update --init --recursive
 
 #### 2. Configure environment variables
 
-Before proceeding, set the following environment variables so that Spring Boot picks up your credentials and secret.
+Move to the "progresso" folder and open a new terminal, set the following environment variables so that Spring Boot picks up your credentials and secret.
 
 - ##### Linux / macOS (bash, zsh, etc.)
   ```bash
   export DB_USER="your_mysql_username"
   export DB_PASS="your_mysql_password"
-  export JWT_SECRET="your_jwt_secret_key"
+  export JWT_SECRET="KVZy7tPsOHBKTdqzKGKYOJibEq54pI0QJ7ytfuJnjxw="
   ```
   To verify:
   ```bash
@@ -109,7 +107,7 @@ Before proceeding, set the following environment variables so that Spring Boot p
   ```bash
   $env:DB_USER = "your_mysql_username"
   $env:DB_PASS = "your_mysql_password"
-  $env:JWT_SECRET = "your_jwt_secret_key"
+  $env:JWT_SECRET = "KVZy7tPsOHBKTdqzKGKYOJibEq54pI0QJ7ytfuJnjxw="
   ```
   To verify:
   ```bash
@@ -122,29 +120,31 @@ Before proceeding, set the following environment variables so that Spring Boot p
   ```bash
   set DB_USER=your_mysql_username
   set DB_PASS=your_mysql_password
-  set JWT_SECRET=your_jwt_secret_key
+  set JWT_SECRET=KVZy7tPsOHBKTdqzKGKYOJibEq54pI0QJ7ytfuJnjxw=
   ```
   To verify:
    ```bash
-  echo %DB_USER%
+   echo %DB_USER%
    echo %DB_PASS%
    echo %JWT_SECRET%
    ```
 
 #### 3. Set up the MySQL database
 
-##### 1. Start your MySQL server.
+##### 1. Open MySQL workbench and start the server.
 ##### 2. Create a new database:
 
 ```bash
 CREATE SCHEMA progresso CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE progresso;
 ```
 
 #### 4. Build and run the backend
 
-From the backend directory, run the following commands:
+Return to the previous terminal and run the following commands:
 
 ```bash
+cd progresso_backend
 mvn clean install
 mvn spring-boot:run
 ```
@@ -154,18 +154,18 @@ mvn spring-boot:run
 
 Make sure the following tools are installed on your system:
 
-- [Node.js (v22.12.0 or higher)](https://nodejs.org/en/download/)
-- [Angular CLI (v19.1.0 or higher)](https://angular.dev/tools/cli/setup-local)
+- [Node.js (v22 or higher)](https://nodejs.org/dist/v22.15.1/node-v22.15.1-x64.msi)
+- [Angular CLI (v19)](https://angular.dev/tools/cli/setup-local)
 
 #### 1. Verify Node.js version
+Open a new terminal and execute:
+
 ```bash
 node --version
-# should output: v22.12.0 (or newer)
 ```
 #### 2. Verify Angular CLI version
 ```bash
 ng version
-# should show Angular CLI: 19.1.0 (or newer)
 ```
 If you need to update:
 ```bash
@@ -173,9 +173,12 @@ npm install -g @angular/cli@latest
 ```
 
 #### 3. Navigate to the frontend module
+Open a new terminal and execute:
 ```bash
-cd progresso-frontend
+cd path/to/progresso-frontend
 ```
+*Tip: You can open the terminal directly in the `progresso-frontend` folder by right-clicking inside the folder in File Explorer (Windows) and selecting "Open in Terminal", or use the equivalent on your OS.*
+
 #### 4. Install dependencies
 ```bash
 npm install --legacy-peer-deps
