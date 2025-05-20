@@ -196,7 +196,7 @@ Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope CurrentUser
 #### 3. Navigate to the frontend module
 Open a new terminal and execute:
 ```bash
-cd path/to/progresso-frontend
+cd path/to/progresso_frontend
 ```
 *Tip: You can open the terminal directly in the `progresso-frontend` folder by right-clicking inside the folder in File Explorer (Windows) and selecting "Open in Terminal", or use the equivalent on your OS.*
 
