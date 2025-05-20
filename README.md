@@ -227,6 +227,11 @@ You can log in as **admin** to explore the existing demo data already inserted i
 
 This setup allows you to see a fully functional example and quickly test the application’s core features.
 
+> ⚠️ **Note on user credentials**  
+> Newly registered users are created with automatically generated usernames and passwords.  
+> To **retrieve the generated username and password**, look at the application logs (stdout) at the time the user was created — the plain password is printed for demo purposes.  
+> Passwords are stored hashed and cannot be retrieved after creation, so saving or copying them when displayed is recommended.
+
 <h2 id="documentation">📄 Documentation</h2>
 
 The full technical documentation, including use cases, system architecture, and testing details, is available in the thesis document (in Italian):
