@@ -213,16 +213,19 @@ The frontend will be available at:
 ```bash
 http://localhost:4200
 ```
-#### 6. Initial Admin User
-To get you started immediately, the application will auto-create a default administrator on first run.
+#### 6. Initial Admin User and Demo Data  
+The application comes pre-loaded with demo data to help you get started immediately. On first run, a default administrator user is automatically created:  
 - **Username:** `a.superuser.am1@progresso.com`  
 - **Password:** `admin123`
 
-Once logged in as **admin**, you can:
-- Register new users
-- Create projects
-- Define teams
-- Create and assign tasks
+You can log in as **admin** to explore the existing demo data already inserted in the system, including projects, teams, tasks, users, and comments. Once logged in, you can:  
+- Register new users  
+- Create additional projects  
+- Define new teams  
+- Create and assign new tasks  
+- Add comments and interact with existing ones  
+
+This setup allows you to see a fully functional example and quickly test the application’s core features.
 
 <h2 id="documentation">📄 Documentation</h2>
 
